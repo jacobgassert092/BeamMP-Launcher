@@ -239,7 +239,7 @@ void HTTP::StartProxy() {
             handle_request(req, res);
         });
 
-        ProxyPort = HTTPProxy.bind_to_any_port(options.ip.c_str());
+        ProxyPort = HTTPProxy.bind_to_any_port(options.ip);
         debug("HTTP Proxy listening on port " + std::to_string(ProxyPort));
         HTTPProxy.listen_after_bind();
     });
