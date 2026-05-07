@@ -92,6 +92,12 @@ void InitOptions(int argc, const char *argv[], Options &options) {
             }
             options.user_path = argv[i + 1];
             i++;
+         } else if (argument == "--ip") {
+            if (i + 1 >= argc) {
+                error("You must specify an IP address after the `--ip` argument");
+            }
+            options.ip = argv[i + 1];
+            i++;
         } else if (argument == "--" || argument == "--game") {
             options.game_arguments = &argv[i + 1];
             options.game_arguments_length = argc - i - 1;
