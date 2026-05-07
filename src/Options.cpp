@@ -113,6 +113,7 @@ void InitOptions(int argc, const char *argv[], Options &options) {
                 "\t--no-update          Skip applying launcher updates (you must update manually)\n"
                 "\t--no-launch          Skip launching the game (you must launch the game manually)\n"
                 "\t--dev                Developer mode, same as --verbose --no-download --no-launch --no-update\n"
+                "\t--ip <address>       The local IP to bind the proxy to (default 127.0.0.1)\n"
                 "\t--user-path <path>   Path to BeamNG's User Path\n"
                 "\t--game <args...>     Passes ALL following arguments to the game, see also `--`\n"
                 << std::flush;
