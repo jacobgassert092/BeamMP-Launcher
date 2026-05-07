@@ -19,7 +19,8 @@
 #include <iostream>
 #include <mutex>
 #include <nlohmann/json.hpp>
-
+#include "Options.h"      
+extern Options options;   
 
 static size_t CurlWriteCallback(void* contents, size_t size, size_t nmemb, void* userp) {
     std::string* Result = reinterpret_cast<std::string*>(userp);
